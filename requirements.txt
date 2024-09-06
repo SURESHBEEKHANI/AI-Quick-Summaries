@@ -1,0 +1,5 @@
+streamlit==1.38.0
+langchain-google-genai==1.0.10
+langchain-core==0.2.38
+python-dotenv==1.0.1
+youtube-transcript-api==0.6.2
