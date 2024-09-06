@@ -20,7 +20,7 @@ Before running the app, make sure you have the following installed:
 
 Create a `.env` file in the project root with the following content, replacing `your_gemini_api_key_here` with your actual API key:
 
-
+```bash
 GEMINI_API_KEY=your_gemini_api_key_here
 
 
