@@ -24,7 +24,7 @@ Create a `.env` file in the project root with the following content, replacing `
 GEMINI_API_KEY=your_gemini_api_key_here
 
 
-##Installation and Setup
+## Installation and Setup
 
 Step 1: Clone the Repository
 Clone the repository using the following command:
