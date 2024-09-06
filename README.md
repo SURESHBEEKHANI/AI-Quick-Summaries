@@ -30,27 +30,21 @@ Copy code
 ### Step 1: Clone the Repository
 
 Clone the repository using the following command:
-
-```bash
 git clone https://github.com/sureshbeekhani/ai-quick-summaries.git
 cd ai-quick-summaries
-Step 2: Install Dependencies
-Install the required Python packages using the requirements.txt file:
 
-bash
-Copy code
+
+Step 2: Install Dependencies
+
+Install the required Python packages using the requirements.txt file:
 pip install -r requirements.txt
+
 Step 3: Set Up the Environment Variables
 Create a .env file in the root directory of the project and add your Google Gemini API key as follows:
-
-bash
-Copy code
 GEMINI_API_KEY=your_gemini_api_key_here
-Step 4: Run the Application
-Run the Streamlit app with the following command:
 
-bash
-Copy code
+Step 4: Run the Application
+Run the Streamlit app with the following command
 streamlit run app.py
 This will launch the app in your browser.
 
@@ -67,15 +61,16 @@ Supported File Types
 PDF: The app will summarize the main points of the document.
 JPEG, JPG, PNG: The app will describe the image.
 TXT: The app will provide a summary of the text content.
+
+
+
 Project Structure
-bash
-Copy code
-.
 ├── app.py              # Main Streamlit app
 ├── .env                # Environment variables for API keys
 ├── README.md           # Project documentation
 ├── requirements.txt    # Python dependencies
 └── imgs/               # Directory for storing image assets like the logo
+
 Code Overview
 Here’s a high-level overview of the main parts of the code:
 
@@ -112,8 +107,7 @@ python-dotenv: For handling environment variables.
 pathlib, tempfile, os, base64: For file processing and conversion.
 You can install these dependencies using the following command:
 
-bash
-Copy code
+
 pip install -r requirements.txt
 Known Issues
 The app currently supports only PDF, image, and text files. Other file formats may not work as expected.
