@@ -28,3 +28,7 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 Step 1: Clone the Repository
 Clone the repository using the following command:
+
+git clone https://github.com/sureshbeekhani/ai-quick-summaries.git
+cd ai-quick-summaries
+
