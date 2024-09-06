@@ -31,7 +31,9 @@ def image_to_base64(image_path):
 
 # Step 5: Convert the logo image to Base64
 # Path to the logo image used in the app's sidebar
-logo_path = "C:/Users/SURESH BEEKHANI/Desktop/Quick summaries/imgs/log.png"  # Adjust the path to your logo
+
+logo_path = "imgs/log.png"
+
 
 # Convert the logo image to Base64 for embedding in the Streamlit sidebar
 logo_base64 = image_to_base64(logo_path)
