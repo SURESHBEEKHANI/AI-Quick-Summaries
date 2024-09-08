@@ -1,4 +1,4 @@
-# AI Quick Summaries
+## AI Quick Summaries
 
 AI Quick Summaries is a simple web application built using Streamlit that allows users to summarize different types of files and text using Google's Gemini Generative AI. The app supports files such as PDFs, images (JPEG, PNG), and text files.
 
