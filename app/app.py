@@ -122,8 +122,7 @@ elif file_option == "Input Text":
 st.write("### Summary")
 for idx, (input_text, ai_response) in enumerate(st.session_state.chat_history):
     st.write(f"**Input {idx + 1}:** {input_text}")
-    st.write(f"**Summary {idx + 1}:** {ai_response}")
-    st.write("---")
+    st.write(f"**Summary {idx + 1}:** {ai_response}"
 
 # Step 19: Provide fallback message if no input method is selected
 else:
