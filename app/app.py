@@ -66,7 +66,7 @@ if file_option == "Upload File":
     uploaded_file = st.sidebar.file_uploader("Choose a file", type=["pdf", "jpeg", "png", "txt"])
     
     if uploaded_file:
-        with st.spinner('Processing your file...'):
+        with st.spinner('Processing your file'):
             with tempfile.NamedTemporaryFile(delete=False, suffix=Path(uploaded_file.name).suffix) as tmp_file:
                 tmp_file.write(uploaded_file.getbuffer())
                 tmp_file_path = tmp_file.name
@@ -120,11 +120,10 @@ elif file_option == "Input Text":
             # Update chat history
             st.session_state.chat_history.append((text_input, response.text))
             
-            st.write("### Summary")
-            st.write(response.text, language="Markdown")
+           
 
 # Step 18: Display chat history
-st.write("### Chat History")
+st.write("### Summary")
 for idx, (input_text, ai_response) in enumerate(st.session_state.chat_history):
     st.write(f"**Input {idx + 1}:** {input_text}")
     st.write(f"**Summary {idx + 1}:** {ai_response}")
