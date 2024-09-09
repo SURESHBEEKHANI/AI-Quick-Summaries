@@ -120,9 +120,7 @@ elif file_option == "Input Text":
             # Update chat history
             st.session_state.chat_history.append((text_input, response.text))
             
-           
-
-# Step 18: Display chat history
+           # Step 18: Display chat history
 st.write("### Summary")
 for idx, (input_text, ai_response) in enumerate(st.session_state.chat_history):
     st.write(f"**Input {idx + 1}:** {input_text}")
