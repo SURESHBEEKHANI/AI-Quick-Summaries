@@ -101,8 +101,6 @@ if file_option == "Upload File":
                 # Update chat history
                 st.session_state.chat_history.append((uploaded_file.name, response.text))
                 
-                st.write("### Summary")
-                st.write(response.text, language="Markdown")
 
             os.remove(tmp_file_path)
 
