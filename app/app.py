@@ -99,14 +99,16 @@ if file_option == "Upload File":
                 response = model.generate_content([sample_file, prompt], request_options={"timeout": 600})
                 
                 # Update chat history
-                st.session_state.chat_history.append((uploaded_file.name, response.text))
+                st.session_state.chat_history.append(("Uploaded File: " + uploaded_file.name, response.text))
                 
+                st.write("### Summary")
+                st.write(response.text, language="Markdown")
 
             os.remove(tmp_file_path)
 
 # Step 17: If text input is selected, process the text
 elif file_option == "Input Text":
-    text_input = st.chat_input("Enter your text here:")
+    text_input = st.text_area("Enter your text here:")
     
     if text_input:
         with st.spinner('Generating summary...'):
@@ -116,13 +118,18 @@ elif file_option == "Input Text":
             response = model.generate_content([text_input, prompt], request_options={"timeout": 600})
             
             # Update chat history
-            st.session_state.chat_history.append((text_input, response.text))
+            st.session_state.chat_history.append(("Text Input", text_input, response.text))
             
-           # Step 18: Display chat history
-st.write("### Summary")
-for idx, (input_text, ai_response) in enumerate(st.session_state.chat_history):
-    st.write(f"**Input {idx + 1}:** {input_text}")
-    st.write(f"**Summary {idx + 1}:** {ai_response}"
+            
+
+# Step 18: Display chat history
+st.write("### Chat History")
+for idx, (input_type, input_text, ai_response) in enumerate(st.session_state.chat_history):
+    st.write(f"**Interaction {idx + 1}:**")
+    st.write(f"**Type:** {input_type}")
+    st.write(f"**Input:** {input_text}")
+    st.write(f"**Summary:** {ai_response}")
+    st.write("---")
 
 # Step 19: Provide fallback message if no input method is selected
 else:
